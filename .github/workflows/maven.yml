@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Start Docker Selenium Grid setup
-      run: docker-compose -f docker-compose-v3.yml up
+      run: docker-compose -f docker-compose-v3.yml up -d --build
       
     - name: Build with Maven
       run: mvn clean test
